@@ -1,5 +1,8 @@
 let movieList = document.querySelector(".movie__list");
 let movieName = document.querySelector(".movie__name");
+let form = document.querySelector(".movie__year");
+let inputFrom = document.querySelector(".movie__yearfrom");
+let inputTo = document.querySelector(".movie__yearto");
 
 const showMovies = function (array) {
   array.forEach((element) => {
@@ -64,4 +67,20 @@ movieName.addEventListener("keyup", function () {
   });
 
   showMovies(result);
+});
+
+form.addEventListener("submit", function (e) {
+  movieList.innerHTML = "";
+  e.preventDefault();
+
+  let from = Number(inputFrom.value);
+  let to = Number(inputTo.value);
+
+  let mov = movies.filter((element) => {
+    let u = from <= element.movie_year && to >= element.movie_year;
+    console.log(element.movie_year);
+    return u;
+  });
+
+  showMovies(mov);
 });
