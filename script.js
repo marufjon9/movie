@@ -1,4 +1,5 @@
 let movieList = document.querySelector(".movie__list");
+let movieName = document.querySelector(".movie__name");
 
 const showMovies = function (array) {
   array.forEach((element) => {
@@ -52,3 +53,15 @@ const showMovies = function (array) {
 };
 
 showMovies(movies);
+
+movieName.addEventListener("keyup", function () {
+  movieList.innerHTML = "";
+  const searchValue = movieName.value.trim().toLowerCase();
+
+  let result = movies.filter(function (element) {
+    let searchName = element.Title.toLowerCase();
+    return searchName.includes(searchValue);
+  });
+
+  showMovies(result);
+});
