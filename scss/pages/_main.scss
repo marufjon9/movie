@@ -18,6 +18,10 @@
   margin-top: -30px;
   margin-left: auto;
   margin-right: auto;
+  transition: 0.5s ease;
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 .movie-top__inner {
   text-align: center;
@@ -30,6 +34,13 @@
 .movie__name {
   border: 1px solid transparent;
   border-radius: 15px;
+  padding: 5px;
+  &::placeholder {
+    padding: 10px 10px;
+  }
+  &:focus {
+    outline: none;
+  }
 }
 .movie-top__wrapper {
   text-align: center;
