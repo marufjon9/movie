@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Movies</title>
+  </head>
+  <body>
+    <div class="movie">
+      <div class="container">
+        <div class="novie-logo">
+          <a href="index.html" class="movie__logo logo">
+            <img
+              src="ryan-reynold-deadpool-marvel.png"
+              alt="logo"
+              class="logo__img"
+            />
+          </a>
+        </div>
+        <div class="movie-top">
+          <div class="movie-top__inner">
+            <h3 class="movie__heading">Search by name</h3>
+            <form class="movie__form">
+              <input
+                title="name"
+                type="text"
+                class="movie__name"
+                placeholder="Movie name"
+              />
+            </form>
+          </div>
+
+          <div class="movie-top__wrapper">
+            <h4 class="movie__heading">Search by year</h4>
+            <form class="movie__year">
+              <input
+                title="movieyear"
+                type="number"
+                class="movie__yearfrom"
+                placeholder="from"
+              />
+              <input
+                title="movieyear"
+                type="number"
+                class="movie__yearto"
+                placeholder="to"
+              />
+              <button type="submit" class="movie__button">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="movies.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

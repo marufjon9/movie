@@ -1,0 +1,49 @@
+.movie {
+}
+.container {
+}
+.movie-top {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+.movie__logo {
+}
+.logo {
+}
+.logo__img {
+  max-width: 400px;
+  width: 100%;
+  margin-top: -30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.movie-top__inner {
+  text-align: center;
+}
+.movie__heading {
+}
+.movie__form {
+  margin-top: 10px;
+}
+.movie__name {
+  border: 1px solid transparent;
+  border-radius: 15px;
+}
+.movie-top__wrapper {
+  text-align: center;
+}
+.movie__year {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.movie__yearfrom {
+}
+.movie__yearto {
+}
+.movie__button {
+}
