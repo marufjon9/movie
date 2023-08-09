@@ -36,8 +36,10 @@
   border-radius: 15px;
   padding: 5px;
   padding-left: 15px;
+  background-color: #272829;
+  color: #fff;
   &::placeholder {
-    color: #454545;
+    color: rgba(255, 255, 255, 0.3);
   }
   &:focus {
     outline: none;
@@ -61,8 +63,11 @@
   border-radius: 15px;
   padding: 5px;
   padding-left: 15px;
+  background-color: #272829;
+  color: #fff;
+
   &::placeholder {
-    color: #454545;
+    color: rgba(255, 255, 255, 0.3);
   }
   &:focus {
     outline: none;
@@ -73,8 +78,11 @@
   border-radius: 15px;
   padding: 5px;
   padding-left: 15px;
+  background-color: #272829;
+  color: #fff;
+
   &::placeholder {
-    color: #454545;
+    color: rgba(255, 255, 255, 0.3);
   }
   &:focus {
     outline: none;
@@ -103,25 +111,38 @@
   gap: 20px;
 }
 .movie__item {
-}
-.item {
+  margin: 0 auto;
+  transition: all 0.5s ease;
   background-color: #272829;
   border-radius: 15px;
   overflow: hidden;
   max-width: 300px;
   width: 100%;
+  &:hover {
+    box-shadow: 0px 5px 10px 2px rgba(68, 75, 81, 0.47);
+  }
+}
+.item {
 }
 .movie__img {
+  min-width: 300px;
+  width: 100%;
+  max-height: 168px;
 }
 .item__title {
-  font-size: 25px;
+  font-size: 22px;
   margin-bottom: 10px;
   padding: 10px 15px;
+  min-height: 100px;
 }
 .movie__description {
   padding: 15px;
+  max-height: 140px;
+  min-height: 140px;
+  overflow: hidden;
 }
 .movie__textbox {
+  margin-top: 40px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 0 15px 15px 15px;
@@ -135,15 +156,18 @@
 .movie__language {
 }
 .movie__link {
+  text-decoration: none;
   text-align: end;
   text-decoration: none;
   color: #fff;
+  transition: 0.5s ease;
+  &:hover {
+    color: #900c3f;
+    transform: scale(1.05);
+  }
 }
 
-@media only screen and (min-width: 575px) {
-  .movie__item {
-    margin: 0 auto;
-  }
+@media only screen and (min-width: 375px) {
 }
 @media only screen and (min-width: 600px) {
   .movie__heading,
@@ -151,7 +175,7 @@
     font-size: 20px;
   }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 648px) {
   .movie__list {
     grid-template-columns: 1fr 1fr;
   }
