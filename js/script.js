@@ -61,7 +61,7 @@ movieName.addEventListener("keyup", function () {
   movieList.innerHTML = "";
   const searchValue = movieName.value.trim().toLowerCase();
 
-  let result = movies.filter(function (element) {
+  let result = movies.filter((element) => {
     let searchName = element.Title.toLowerCase();
     return searchName.includes(searchValue);
   });
@@ -78,9 +78,11 @@ form.addEventListener("submit", function (e) {
 
   let mov = movies.filter((element) => {
     let u = from <= element.movie_year && to >= element.movie_year;
-    console.log(element.movie_year);
+
     return u;
   });
+  inputFrom.value = "";
+  inputTo.value = "";
 
   showMovies(mov);
 });

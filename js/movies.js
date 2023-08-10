@@ -1813,21 +1813,6 @@ const movies = [
   },
 
   {
-    Title: "Your Name",
-    fulltitle: "Your Name (2016)",
-    movie_year: 2016,
-    Categories: "Animation|Drama|Fantasy|Romance",
-    summary:
-      "Mitsuha is the daughter of the mayor of a small mountain town. She's a straightforward high school girl who lives with her sister and her grandmother and has no qualms about letting it be known that she's uninterested in Shinto rituals or helping her father's electoral campaign. Instead she dreams of leaving the boring town and trying her luck in Tokyo. Taki is a high school boy in Tokyo who works part-time in an Italian restaurant and aspires to become an architect or an artist. Every night he has a strange dream where he becomes...a high school girl in a small mountain town.",
-    ImageURL:
-      "https://hydramovies.com/wp-content/uploads/2018/04/Your-Name-Movie-Poster.jpg",
-    imdb_id: "tt5311514",
-    imdb_rating: 8.4,
-    runtime: 106,
-    language: "English",
-    ytid: "VgixlvX28-g",
-  },
-  {
     Title: "Dawson City: Frozen Time",
     fulltitle: "Dawson City: Frozen Time (2016)",
     movie_year: 2016,
@@ -2551,7 +2536,7 @@ const movies = [
   },
 
   {
-    Title: 1922,
+    Title: "1922",
     fulltitle: "1922 (2017)",
     movie_year: 2017,
     Categories: "Crime|Drama|Mystery|Thriller",
@@ -5558,21 +5543,6 @@ const movies = [
   },
 
   {
-    Title: "Your Name",
-    fulltitle: "Your Name (2016)",
-    movie_year: 2016,
-    Categories: "Animation|Drama|Fantasy|Romance",
-    summary:
-      "Mitsuha is the daughter of the mayor of a small mountain town. She's a straightforward high school girl who lives with her sister and her grandmother and has no qualms about letting it be known that she's uninterested in Shinto rituals or helping her father's electoral campaign. Instead she dreams of leaving the boring town and trying her luck in Tokyo. Taki is a high school boy in Tokyo who works part-time in an Italian restaurant and aspires to become an architect or an artist. Every night he has a strange dream where he becomes...a high school girl in a small mountain town.",
-    ImageURL:
-      "https://hydramovies.com/wp-content/uploads/2018/04/Your-Name-Movie-Poster.jpg",
-    imdb_id: "tt5311514",
-    imdb_rating: 8.4,
-    runtime: 106,
-    language: "English",
-    ytid: "VgixlvX28-g",
-  },
-  {
     Title: "Dawson City: Frozen Time",
     fulltitle: "Dawson City: Frozen Time (2016)",
     movie_year: 2016,
@@ -6296,7 +6266,7 @@ const movies = [
   },
 
   {
-    Title: 1922,
+    Title: "1922",
     fulltitle: "1922 (2017)",
     movie_year: 2017,
     Categories: "Crime|Drama|Mystery|Thriller",
@@ -7490,36 +7460,5 @@ const movies = [
     runtime: 92,
     language: "English",
     ytid: "rcQ4JKxxukY",
-  },
-
-  {
-    Title: "Faces Places",
-    fulltitle: "Faces Places (2017)",
-    movie_year: 2017,
-    Categories: "Documentary",
-    summary:
-      "Agnes Varda, one of the leading lights of France's honored French New Wave cinema era, and professional photographer and muralist, J.R., partake on a special art project. Together, they travel around France in a special box truck equipped as a portable photo booth and traveling printing facility as they take photographs of people around the country. With that inspiration, they also create special colossal mural pictures of individuals, communities and places they want to honor and celebrate. Along the way, the old cinematic veteran and the young artistic idealist enjoy an odd friendship as they chat and explore their views on the world as only they can.",
-    ImageURL:
-      "https://hydramovies.com/wp-content/uploads/2018/04/Faces-Places-Movie-Poster.jpg",
-    imdb_id: "tt5598102",
-    imdb_rating: 8,
-    runtime: 89,
-    language: "English",
-    ytid: "2rKZcAiLHlY",
-  },
-  {
-    Title: "The Post",
-    fulltitle: "The Post (2017)",
-    movie_year: 2017,
-    Categories: "Biography|Drama|History|Thriller",
-    summary:
-      "When American military analyst, Daniel Ellsberg, realizes to his disgust the depths of the US government's deceptions about the futility of the Vietnam War, he takes action by copying top-secret documents that would become the Pentagon Papers. Later, Washington Post owner, Kay Graham, is still adjusting to taking over her late husband's business when editor Ben Bradlee discovers the New York Times has scooped them with an explosive expose on those papers. Determined to compete, Post reporters find Ellsberg himself and a complete copy of those papers. However, the Post's plans to publish their findings are put in jeopardy with a Federal restraining order that could get them all indicted for Contempt. Now, Kay Graham must decide whether to back down for the safety of her paper or publish and fight for the Freedom of the Press. In doing so, Graham and her staff join a fight that would have America's democratic ideals in the balance.",
-    ImageURL:
-      "https://hydramovies.com/wp-content/uploads/2018/04/The-Post-Movie-Poster.jpg",
-    imdb_id: "tt6294822",
-    imdb_rating: 7.2,
-    runtime: 116,
-    language: "English",
-    ytid: "nrXlY6gzTTM",
   },
 ];
