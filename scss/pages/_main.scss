@@ -135,7 +135,7 @@
   margin-bottom: 10px;
   margin-top: 15px;
   padding: 10px 15px;
-  min-height: 100px;
+  min-height: 120px;
 }
 .movie__description {
   padding: 15px;
@@ -195,4 +195,54 @@
   .movie__list {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+}
+
+.movie__bookmark {
+  margin-top: 10px;
+}
+.movie__fav {
+  width: 64px;
+  height: 64px;
+  background-image: url("/img/fav.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;
+  border: 1px solid transparent;
+  transition: 0.5s ease;
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.moreInfoButton {
+  border: none;
+  background-color: transparent;
+  text-align: left;
+  color: green;
+  font-weight: bold;
+  transition: 0.5s ease;
+  &:hover {
+    color: #900c3f;
+  }
+}
+
+.bookmarkButton {
+  background-color: transparent;
+  width: 34px;
+  height: 34px;
+  border: none;
+  background-image: url("/img/unfav.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  justify-self: end;
+  transition: all 0.5s ease;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.modal-content {
+  background-color: #272829;
 }

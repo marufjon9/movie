@@ -20,9 +20,20 @@ const showMovies = function (array) {
     movtitle.classList.add("item__title");
     movtitle.textContent = element.Title;
 
-    let movdescription = document.createElement("p");
-    movdescription.classList.add("movie__description");
-    movdescription.textContent = element.summary;
+    // let movdescription = document.createElement("p");
+    // movdescription.classList.add("movie__description");
+    // movdescription.textContent = element.summary;
+
+    let moreInfoBtn = document.createElement("button");
+    moreInfoBtn.textContent = "More info";
+    moreInfoBtn.setAttribute("type", "button");
+    moreInfoBtn.classList.add("moreInfoButton", "modal-btn");
+    moreInfoBtn.setAttribute("data-bs-toggle", "modal");
+    moreInfoBtn.setAttribute("data-bs-target", "#exampleModal");
+    moreInfoBtn.dataset.id = element.ytid;
+
+    let bookmarkBtn = document.createElement("button");
+    bookmarkBtn.classList.add("bookmarkButton");
 
     let textbox = document.createElement("div");
     textbox.classList.add("movie__textbox");
@@ -47,9 +58,16 @@ const showMovies = function (array) {
     );
     movlink.textContent = `IMDB link`;
 
-    textbox.append(movrating, movadate, movlang, movlink);
+    textbox.append(
+      movrating,
+      movadate,
+      movlang,
+      movlink,
+      moreInfoBtn,
+      bookmarkBtn,
+    );
 
-    li.append(movimg, movtitle, movdescription, textbox);
+    li.append(movimg, movtitle, textbox);
 
     movieList.append(li);
   });
@@ -86,3 +104,22 @@ form.addEventListener("submit", function (e) {
 
   showMovies(mov);
 });
+
+const modalTitle = document.querySelector(".modal-title");
+const modalBody = document.querySelector(".modal-body");
+const modalBtn = document.querySelector(".modal-btn");
+
+movieList.addEventListener("click", function (e) {
+  if (e.target.matches(".modal-btn")) {
+    const btnId = e.target.dataset.id;
+    const foundMovie = movies.find((item) => {
+      return item.ytid == btnId;
+    });
+    modalTitle.textContent = foundMovie.fulltitle;
+    modalBody.textContent = foundMovie.summary;
+  }
+});
+
+function renderModal(id) {
+  console.log(id);
+}
