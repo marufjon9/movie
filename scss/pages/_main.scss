@@ -243,6 +243,69 @@
   }
 }
 
+.bkmb {
+  background-image: url("../img/fav.png");
+}
+
 .modal-content {
   background-color: #272829;
+}
+
+.btn-secondary {
+  transition: all 0.5s ease;
+
+  &:hover {
+    background-color: #900c3f;
+  }
+}
+
+.btn-close {
+  transition: all 0.5s ease;
+
+  &:hover {
+    background-color: #900c3f;
+  }
+}
+
+.modall {
+  background-color: rgba(0, 0, 0, 0.98);
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.no-display {
+  display: none;
+}
+
+.modal__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.modal-exit {
+  position: absolute;
+  top: 10%;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+
+.style {
+  max-width: 50px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease;
+  &:hover {
+    transform: scale(1.1);
+  }
 }

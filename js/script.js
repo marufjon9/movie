@@ -3,8 +3,17 @@ let movieName = document.querySelector(".movie__name");
 let form = document.querySelector(".movie__year");
 let inputFrom = document.querySelector(".movie__yearfrom");
 let inputTo = document.querySelector(".movie__yearto");
+const fav = document.querySelector(".movie__fav");
+const favBox = document.querySelector("#modall");
+const bookmarkList = document.querySelector(".modal__list");
+const exit = document.querySelector(".modal-exit");
 
-const showMovies = function (array) {
+const bookmark_arr = JSON.parse(localStorage.getItem("bookmark") || "[]");
+
+showMovies(bookmark_arr, bookmarkList, false);
+
+function showMovies(array, ulElement, remove) {
+  ulElement.innerHTML = "";
   array.forEach((element) => {
     let li = document.createElement("li");
     li.classList.add("movie__item");
@@ -34,6 +43,12 @@ const showMovies = function (array) {
 
     let bookmarkBtn = document.createElement("button");
     bookmarkBtn.classList.add("bookmarkButton");
+    bookmarkBtn.dataset.id = element.ytid;
+
+    let deleteBookmark = document.createElement("img");
+    deleteBookmark.classList.add("style");
+    deleteBookmark.setAttribute("src", "/img/del.png");
+    deleteBookmark.dataset.id = element.ytid;
 
     let textbox = document.createElement("div");
     textbox.classList.add("movie__textbox");
@@ -58,22 +73,26 @@ const showMovies = function (array) {
     );
     movlink.textContent = `IMDB link`;
 
-    textbox.append(
-      movrating,
-      movadate,
-      movlang,
-      movlink,
-      moreInfoBtn,
-      bookmarkBtn,
-    );
+    if (remove) {
+      textbox.append(
+        movrating,
+        movadate,
+        movlang,
+        movlink,
+        moreInfoBtn,
+        bookmarkBtn,
+      );
 
-    li.append(movimg, movtitle, textbox);
+      li.append(movimg, movtitle, textbox);
+    } else {
+      li.append(movimg, movtitle, deleteBookmark);
+    }
 
-    movieList.append(li);
+    ulElement.append(li);
   });
-};
+}
 
-showMovies(movies);
+showMovies(movies, movieList, true);
 
 movieName.addEventListener("keyup", function () {
   movieList.innerHTML = "";
@@ -84,7 +103,7 @@ movieName.addEventListener("keyup", function () {
     return searchName.includes(searchValue);
   });
 
-  showMovies(result);
+  showMovies(result, movieList);
 });
 
 form.addEventListener("submit", function (e) {
@@ -102,7 +121,7 @@ form.addEventListener("submit", function (e) {
   inputFrom.value = "";
   inputTo.value = "";
 
-  showMovies(mov);
+  showMovies(mov, movieList);
 });
 
 const modalTitle = document.querySelector(".modal-title");
@@ -123,3 +142,45 @@ movieList.addEventListener("click", function (e) {
 function renderModal(id) {
   console.log(id);
 }
+
+fav.addEventListener("click", function () {
+  favBox.classList.remove("no-display");
+});
+
+exit.addEventListener("click", function () {
+  favBox.classList.add("no-display");
+});
+
+const bkmbtn = document.querySelector(".bookmarkButton");
+const mm = document.querySelector(".movie__item");
+
+movieList.addEventListener("click", function (e) {
+  if (e.target.matches(".bookmarkButton")) {
+    bkmbtn.classList.toggle("bkmb");
+
+    const btnId = e.target.dataset.id;
+    const foundMovie = movies.find((item) => {
+      return item.ytid == btnId;
+    });
+
+    if (!bookmark_arr.find((item) => item == foundMovie)) {
+      bookmark_arr.push(foundMovie);
+    } else {
+      alert("Already saved to favorites");
+    }
+
+    localStorage.setItem("bookmark", JSON.stringify(bookmark_arr));
+
+    showMovies(bookmark_arr, bookmarkList);
+  }
+});
+
+bookmarkList.addEventListener("click", function (e) {
+  if (e.target.matches(".style")) {
+    const btnId = e.target.dataset.id;
+    const foundBookmark = bookmark_arr.findIndex((item) => item.ytid == btnId);
+    bookmark_arr.splice(foundBookmark, 1);
+    localStorage.setItem("bookmark", JSON.stringify(bookmark_arr));
+    showMovies(bookmark_arr, bookmarkList, false);
+  }
+});
